@@ -1,0 +1,40 @@
+/* body{
+    background:aqua;
+} */
+
+/* working on all p in div including decendents*/
+/* div p{
+    background: brown;
+    color: white;
+} */
+
+/* working on child p of div only */
+/* div>p{
+    background: brown;
+    color: white;
+} */
+
+/* work on first forward sibling */
+/* div+p{
+    background: brown;
+    color: white;
+} */
+
+/* work on all forward sibling */
+/* div~p{
+    background: brown;
+    color: white;
+} */
+
+/* */
+p:nth-child(2){
+    background: brown;
+    color: white;
+}
+
+/*  */
+/* div p:nth-of-type(1){
+    background-color: brown;
+    color: white;
+} */
+
