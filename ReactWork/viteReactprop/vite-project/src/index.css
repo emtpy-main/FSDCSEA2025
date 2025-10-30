@@ -1,0 +1,49 @@
+* {
+    font-family: sans-serif;
+}
+
+.idcard-container {
+    display: flex;
+    gap: 10px;
+}
+
+.profiles {
+    display: flex;
+    gap: 10px;
+}
+
+.main-component {
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-component img {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.main-component:hover  {
+    background-color: rgb(224, 150, 150);
+    transition: all 0.2s ease-in;
+}
+
+.bookCard{
+    width: fit-content;
+    padding: 1rem;
+    border: solid 1px;
+    background-color: snow;
+}
+
+.bookcard-container{
+    margin-top: 2rem;
+    display: flex;
+    width: 100vw;
+    background-color: beige;
+    justify-content: space-evenly;
+}

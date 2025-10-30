@@ -38,3 +38,9 @@
     color: white;
 } */
 
+p::after{
+    content: "A";
+}
+p:nth-child(1):before{
+    content:"Abes ec"
+}

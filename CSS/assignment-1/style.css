@@ -1,65 +1,123 @@
-body {
+* {
+     box-sizing: border-box;
      margin: 0;
-     width: 100%;
-     font-family: sans-serif;
+     padding: 0;
+}
+
+html,
+body {
+     height: 100%;
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+     background: #f3f4f6;
+     color: #111827;
+}
+
+.head {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 1rem;
+     padding: .75rem 1.25rem;
+     background: #111827;
+     color: #fff;
+}
+
+.head>div {
+     color: #fff;
+}
+
+.headInput {
+     padding: .4rem .6rem;
+     width: min(560px, 40vw);
+     border-radius: 4px;
+     border: 1px solid rgba(255, 255, 255, .15);
+     background: #fff;
+}
+
+.subheader {
+     display: flex;
+     gap: .75rem;
+     align-items: center;
+     padding: .5rem 1rem;
+     background: #161616;
+     overflow-x: auto;
+     white-space: nowrap;
+}
+
+
+.subheader div {
+     color: #fff;
+     padding: .35rem .6rem;
+     font-size: .95rem;
+     flex: 0 0 auto;
 }
 
 .container {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 1fr);
-     gap: 1rem;
-     border: 2px solid black;
-     padding: 1rem;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 1.25rem;
+     padding: 1.5rem;
+     max-width: 1200px;
+     margin: 0 auto;
 }
 
-.container>div {
-     border-radius: 1rem;
-     background-color: rgb(227, 227, 227);
+.first {
+     background: #fff;
+     border-radius: 8px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
      padding: 1rem;
-     box-sizing: border-box;
+     display: grid;
+     grid-template-rows: auto 1fr;
+     gap: 1rem;
+}
+
+.first .header {
+     font-size: 1.1rem;
+     font-weight: 700;
+     color: #111827;
+     text-align: left;
+     padding: .5rem 0;
+}
+
+.child1 {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: repeat(3, 1fr);
-     gap: 1rem;
-     grid-template-areas:
-          "header header"
-          "child11 child12"
-          "child13 child14";
+     gap: .75rem;
+     align-items: start;
 }
 
-.header {
-     grid-area: header;
-     background-color: beige;
-     font-weight: 700;
-     font-size: medium;
-     padding: 1rem;
+.child11,
+.child12,
+.child13,
+.child14 {
+     background: #fff;
+     border-radius: 6px;
+     padding: .5rem;
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+     align-items: center;
      text-align: center;
+     min-height: 110px;
+     border: 1px solid rgba(0, 0, 0, .06);
 }
-img{
+
+.child11 img,
+.child12 img,
+.child13 img,
+.child14 img {
+     width: 100%;
+     max-width: 186px;
+     height: auto;
      object-fit: cover;
+     border-radius: 4px;
 }
 
-.child11 { 
-     border: 1px solid;
-     background-color: azure;
-     grid-area: child11;
-}
-
-.child12 { 
-     border: 1px solid;
-     background-color: azure;
-     grid-area: child12;
-}
-
-.child13 { 
-     border: 1px solid;
-     background-color: azure;
-     grid-area: child13;
-}
-
-.child14 { 
-     border: 1px solid;
-     background-color: azure;
-     grid-area: child14;
+.child11 p,
+.child12 p,
+.child13 p,
+.child14 p {
+     font-size: .9rem;
+     color: #374151;
+     margin-top: .25rem;
 }
